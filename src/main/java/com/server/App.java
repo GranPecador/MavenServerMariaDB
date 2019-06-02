@@ -1,10 +1,7 @@
 package com.server;
 
 import java.net.UnknownHostException;
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
 	 
@@ -13,7 +10,7 @@ public class App
     {
     	Server server;
     	InteractDB connectionOfMariaDB = InteractMariaDB.getInstance();
-    	int port = 12053;
+    	int port = 12054;
     	if (args.length != 1) {
     		System.out.println("Usage to shange port: java -jar program.jar [port]");
     		server = new Server(port, connectionOfMariaDB);

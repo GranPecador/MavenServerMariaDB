@@ -9,13 +9,13 @@ public class InformationModel {
 
     public InformationModel(String text, Date startDate, Date endDate){
         this.text = text;
-        this.startDate = startDate;
-        this.endDate = endDate;
+        //this.startDate = startDate;
+        //this.endDate = endDate;
     }
 
     public InformationModel(String text, Date endDate){
         this.text = text;
-        this.endDate = endDate;
+        //this.endDate = endDate;
     }
 
     public InformationModel(String text){
@@ -34,7 +34,20 @@ public class InformationModel {
         return startDate;
     }
     
-    public void setStartDate(Date startDate) {
-    	this.startDate = startDate;
+    public byte[] getBytes(Integer currentOrder) {
+    	String message = currentOrder+"#"+this.text+"#"+this.startDate+"#"+this.endDate;
+    	System.out.print(message);
+    	return message.getBytes();
     }
+    
+    public void setStartDate(Date startDate) {
+    	//this.startDate = startDate;
+    }
+    
+    
+    @Override 
+    public String toString() {
+    	return this.text+" "+this.startDate+" "+this.endDate;
+    }
+    
 }

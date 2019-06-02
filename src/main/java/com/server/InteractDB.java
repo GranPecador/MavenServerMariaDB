@@ -1,7 +1,9 @@
 package com.server;
 
+import java.util.List;
+import java.util.Set;
 
 public interface InteractDB {
 	
-	void getInfoFomDB(String address);
+	Set<String> getInfoFomDB(String address);
 }
